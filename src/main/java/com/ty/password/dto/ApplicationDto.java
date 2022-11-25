@@ -10,8 +10,7 @@ public class ApplicationDto {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
-	private String firstname;
-	private String lastname;
+	private String username;
 	private String gender;
 	private String dateofbirth;
 	private String email;
@@ -24,17 +23,11 @@ public class ApplicationDto {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getFirstname() {
-		return firstname;
+	public String getUsername() {
+		return username;
 	}
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
-	}
-	public String getLastname() {
-		return lastname;
-	}
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 	public String getGender() {
 		return gender;
@@ -68,11 +61,13 @@ public class ApplicationDto {
 	}
 	@Override
 	public String toString() {
-		return "ApplicationDto [id=" + id + ", firstname=" + firstname + ", lastname=" + lastname + ", gender=" + gender
-				+ ", dateofbirth=" + dateofbirth + ", email=" + email + ", password=" + password + ", user=" + user
-				+ "]";
+		return "ApplicationDto [id=" + id + ", username=" + username + ", gender=" + gender + ", dateofbirth="
+				+ dateofbirth + ", email=" + email + ", password=" + password + ", user=" + user + "]";
+	}
+	
+	
+	
 	}
 	
 	
 
-}
