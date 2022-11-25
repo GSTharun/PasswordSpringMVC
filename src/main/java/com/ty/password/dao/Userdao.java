@@ -38,7 +38,7 @@ public class Userdao
 		return user;
 	}
 	
-	public User findUserID(int id) {
+	public User findUserByID(int id) {
 		User user = entityManager.find(User.class, id);
 		if (user != null) {
 			return user;
@@ -47,7 +47,7 @@ public class Userdao
 		}
 	}
 	
-	public boolean deleteUser(int id) 
+	public boolean deleteUserById(int id) 
 	{
 		User user = entityManager.find(User.class, id);
 		EntityTransaction entityTransaction = entityManager.getTransaction();
@@ -58,7 +58,7 @@ public class Userdao
 		return true;
 	}
 	
-	public List<User> findUser(){
+	public List<User> getAllUser(){
 		Query query=entityManager.createQuery("select u from User u");
 		
 		return query.getResultList();
