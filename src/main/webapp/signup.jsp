@@ -15,7 +15,7 @@
 		<form:label path="phoneno">Phoneno</form:label>
 		<form input path="phoneno"></form>
 
-		<form:label path="address">Adress</form:label>
+		<form:label path="address">Address</form:label>
 		<form input path="address"></form>
 
 		<form:label path="email">Email</form:label>
