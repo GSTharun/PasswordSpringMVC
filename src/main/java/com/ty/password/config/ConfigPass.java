@@ -11,7 +11,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com.ty.password")
+@ComponentScan(basePackages = {"com.ty.password"})
 public class ConfigPass {
 	
 	@Bean("em")
