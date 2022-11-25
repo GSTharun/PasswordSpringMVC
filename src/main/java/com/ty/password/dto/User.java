@@ -57,12 +57,11 @@ public class User {
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", name=" + name + ", phoneno=" + phoneno + ", address=" + address + ", email="
-				+ email + ", password=" + password + ", getPhoneno()=" + getPhoneno() + ", getId()=" + getId()
-				+ ", getName()=" + getName() + ", getAddress()=" + getAddress() + ", getEmail()=" + getEmail()
-				+ ", getPassword()=" + getPassword() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-				+ ", toString()=" + super.toString() + "]";
+				+ email + ", password=" + password + "]";
+	}
+
 	}
 	
 	
 
-}
+
