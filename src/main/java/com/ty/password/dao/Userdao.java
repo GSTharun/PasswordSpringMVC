@@ -9,6 +9,7 @@ import javax.persistence.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.ty.password.dto.ApplicationDto;
 import com.ty.password.dto.User;
 
 @Repository
@@ -69,6 +70,17 @@ public class Userdao
 	{
 		Query query=entityManager.createQuery("select u from User u where u.email=?1",User.class);
 		return (User) query.setParameter(1, email).getSingleResult();
+		
+	}
+	
+	public ApplicationDto saveApplication(ApplicationDto applicationDto)
+	{
+		EntityTransaction entityTransaction= entityManager.getTransaction();
+		entityTransaction.begin();
+		entityManager.persist(applicationDto);
+		entityTransaction.commit();
+		
+		return applicationDto;
 		
 	}
 
