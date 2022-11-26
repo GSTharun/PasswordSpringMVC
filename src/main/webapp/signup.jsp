@@ -8,22 +8,22 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form:form action="signup" modelAttribute="user">
+	<form:form action="saveuser" modelAttribute="user">
 		<form:label path="name">Name</form:label>
-		<form input path="name"></form>
+		<form:input path="name"/>
 
-		<form:label path="phoneno">Phoneno</form:label>
-		<form input path="phoneno"></form>
+		<form:label path="phoneno">Phone</form:label>
+		<form:input path="phoneno"/>
 
 		<form:label path="address">Address</form:label>
-		<form input path="address"></form>
+		<form:input path="address"/>
 
 		<form:label path="email">Email</form:label>
-		<form input path="email"></form>
+		<form:input path="email"/>
 
 
 		<form:label path="password">Password</form:label>
-		<form input path="password"></form>
+		<form:input path="password"/>
 
 		<input type="submit" value="submit">
 

@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form:form action="applicationuser" modelAttribute="application">
+	<form:form action="saveapplication" modelAttribute="application">
 
 		<form:label path="id">Id</form:label>
 		<form:input path="id" />
