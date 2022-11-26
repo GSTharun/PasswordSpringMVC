@@ -1,4 +1,4 @@
-package com.ty.password.dto;
+ package com.ty.password.dto;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,6 +13,7 @@ public class ApplicationDto {
 	private String username;
 	private String gender;
 	private String dateofbirth;
+	private String applicationtype;
 	private String email;
 	private String password;
 	@ManyToOne
@@ -52,6 +53,14 @@ public class ApplicationDto {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	
+	
+	public String getApplicationtype() {
+		return applicationtype;
+	}
+	public void setApplicationtype(String applicationtype) {
+		this.applicationtype = applicationtype;
 	}
 	public User getUser() {
 		return user;
