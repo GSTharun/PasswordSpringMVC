@@ -72,6 +72,23 @@ public class UserController {
 		return modelAndView;
 		
 	}
+
+	@RequestMapping("applicationlogin")
+	public ModelAndView applicationLogin(User user, ApplicationDto application)
+	{
+		ModelAndView modelAndView = new ModelAndView();
+		User user3=service.saveUserByEmail(user);
+		modelAndView.addObject("user", new User());
+		if(user3!=null)
+		{
+			modelAndView.addObject("application", new ApplicationDto());
+			modelAndView.setViewName("applicationlogin.jsp");
+		}
+		else{
+			modelAndView.setViewName("login.jsp");
+		}
+		return modelAndView;
+	}
 	
 
 
