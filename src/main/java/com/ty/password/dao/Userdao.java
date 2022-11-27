@@ -83,6 +83,19 @@ public class Userdao
 		return applicationDto;
 		
 	}
+	
+	public List<ApplicationDto> getAllApplication(int id){
+		return entityManager.createQuery("select s from ApplicationDto s where s.user_id=?1").setParameter(1, id).getResultList();
+			
+	}
+	
+	public ApplicationDto getApplicationByEmail(String email)
+	{
+		return entityManager.createQuery("select a from ApplicationDto a where a.email=?1",ApplicationDto.class).setParameter(1, email).getSingleResult();
+		
+	}
+	
+
 
 
 }

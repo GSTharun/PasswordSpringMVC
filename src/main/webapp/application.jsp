@@ -1,43 +1,62 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
-	<form:form action="saveapplication" modelAttribute="application">
-
-		<form:label path="id">Id</form:label>
-		<form:input path="id" />
-
-		<form:label path="username">UserName</form:label>
-		<form:input path="username" />
-
-		<form:label path="gender">Gender</form:label>
-		<form:input path="gender" />
+<table border=1px>
+<form:form action="saveapplication" modelAttribute="application">
 
 
-		<form:label path="dateofbirth">DOB</form:label>
-		<form:input path="dateofbirth" />
-
-
-		<form:label path="email">Email</form:label>
-		<form:input path="email" />
-
-		<form:label path="password">Password</form:label>
-		<form:input path="password" />
-
-		<select name="applicationtype" id=applicationtype>
-			<option value="gmail">Gmail:</option>
-			<option value="Facebook">FaceBook:</option>
-			<option value="instagram">InstaGram:</option>
+		<tr>
+		<td><form:label path="username">Username</form:label></td>
+		<td><form:input path="username" /></td>
+		</tr>
+		
+		<tr>
+		<td><label>Gender</label></td>
+		<td><select name="gender" id=gender>
+			<option value="male">MALE</option>
+			<option value="female">FEMALE</option></td>
 		</select>
+		</tr>
+		
+		<tr>
+		<td><form:label path="dateofbirth">DOB</form:label></td>
+		<td><form:input path="dateofbirth" /></td>
+		</tr>
+		
+		<tr>
+		<td><form:label path="email">Email</form:label></td>
+		<td><form:input path="email" /></td>
+		</tr>
 
+		<tr>
+		<td><form:label path="password">Password</form:label></td>
+		<td><form:input path="password" /></td>
+		</tr>
+		
+		<tr>
+		<td><label>Application Type</label></td>
+		<td><select name="applicationtype" id=applicationtype>
+			<option value="gmail">Gmail</option>
+			<option value="Facebook">FaceBook</option>
+			<option value="instagram">InstaGram</option></td>
+		</select>
+		</tr>
+		
+	
+		</table>
+		<br>
 		<input type="submit" value="submit">
-
+		<a href="applogin"><button type="button" class="back">Back</button></a>
+		
 	</form:form>
+
+
 </body>
 </html>

@@ -9,6 +9,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
+import com.ty.password.dto.ApplicationDto;
+
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = {"com.ty.password"})
@@ -20,5 +22,7 @@ public class ConfigPass {
 	{
 		return Persistence.createEntityManagerFactory("password").createEntityManager();
 	}
+	
+
 
 }
